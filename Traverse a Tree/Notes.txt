@@ -1,0 +1,54 @@
+
+Tree Traversal
+---------
+- Pre Order: root, left subtree, right subtree
+- In Order: left subtree, root, right subtree 
+  (Used in Binray Search Tree)
+- Post Order: left subtree, right subtree, root 
+  (Deletion of a node, 
+   parse mathematical exp, with stack to handle the exp)
+
+     F
+   /   \
+  B     G
+ / \     \
+A   D     I
+   / \   /
+  C   E H
+
+- Pre Order: F B A D C E G I H
+- In Order:  A B C D E F G H I
+- Post Order:A C E D B H I G F
+
+Eg.
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Given [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Preorder [1, 2, 4, 8, 9, 5, 10, 11, 3, 6, 12, 13, 7, 14, 15]
+Inorder [8, 4, 9, 2, 10, 5, 11, 1, 12, 6, 13, 3, 14, 7, 15]
+Postorder [8, 9, 4, 10, 11, 5, 2, 12, 13, 6, 14, 15, 7, 3, 1]
+
+Recursion
+---------
+- Powerful and frequently-used methods for solving tree-related problems
+- Two approaches top-down and bottom-up
+- Top-down approach
+  - In each recursion, visit node first to come up with some values, and pass these values to the children
+  - A pre-order traversal
+  - General algorithm
+    top(root, params)
+    return specific value for null node     
+    update answer if needed                   // answer <-- params
+    left_ans = top(root.left, left_params)    // left_params <-- root.val, params
+    right_ans = top(root.right, right_params) // right_params <-- root.val, params
+    return anwser if needed                   // answer <-- left_ans, right_ans
+
+- Bottom-up approach
+  - In each recursion, call functions recursively for all children nodes and come up with answer
+    according to the return values and value of root node
+  - A post-order traversal
+  - General algorithm
+    bottom(root)
+    return specific value for null node
+    left_depth = bottom(root.left)
+    right_depth = bottom(root.right)
+    return max(left_depth, right_depth) + 1

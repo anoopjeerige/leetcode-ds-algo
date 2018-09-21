@@ -1,0 +1,11 @@
+Operation Running Time
+len(data) O(1)
+data[j] O(1)
+data.count(value) O(n)
+data.index(value) O(k+1)
+value in data O(k+1)
+data1 == data2 O(k+1) 
+(similarly !=, <, <=, >, >=) O(k+1)
+data[j:k] O(k− j+1)
+data1 + data2 O(n1 +n2)
+c data O(cn)

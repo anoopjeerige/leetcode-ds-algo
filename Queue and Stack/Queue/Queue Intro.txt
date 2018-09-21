@@ -1,0 +1,9 @@
+Queue 
+	1) Definition	
+	- A FIFO data structure, the first element added to the queue will be processed first.
+	- The insert operation is also called enqueue, element is added always at the end of the queue.
+	- The delete operation is also called dequeue, the first element is allowed to be removed.
+
+	2) Design
+	- Can be implemented using a dynamic array, but will lead to wasted space.
+	- Can be implemented using a circular queue with a fixed-size array, two pointers indicating starting and ending position. 

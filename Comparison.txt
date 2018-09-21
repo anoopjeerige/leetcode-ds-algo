@@ -1,0 +1,10 @@
+Comparison
+
+Here we provide a comparison of time complexity between the linked list and other data structures including array, queue and stack:
+<See Comparision.png>
+
+After this comparison, it is not difficult to come up with our conclusion:
+
+    If you need to add or delete a node frequently, a linked list could be a good choice.
+
+    If you need to access an element by index often, an array might be a better choice than a linked list.

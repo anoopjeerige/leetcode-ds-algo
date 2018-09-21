@@ -1,0 +1,38 @@
+Hash Table
+----------
+- A data structure that organizes data using hashing functions to support quick insertion and deletion
+- Two types of hash tables
+  - 1) Hash Set
+    One of the implementation of a set data structure to store no repeated values.
+  - 2) Hash Map
+    One of the implementation of a map data structure to store key value pairs.
+- By choosing a proper hash function, the hash table can achieve wonderful performance in both insertion and deletion.
+
+Design of Hash Table
+--------------------
+- Principle of hash table
+  Key idea is to use a hash function to map keys to buckets,
+  During insertion, the key is passed to the hash function which assigns the key to a specfic bucket,
+  and during retrieval of that key, the same hash function is used to find the and search the specfic bucket.
+
+- Two important factors for designing a hash table
+  - Hash Function:
+    - A hash function depends on the range of the key values and the number of buckets.
+    - Core idea is to assign the keys to the buckets as uniform as possible.
+    - The hash function cannot be perfect and there is tradeoff between number of buckets and capacity of a bucket.
+
+  - Collision resolution:
+    - A perfect hash function provides one-to-one mapping of the keys and buckets
+    - Normally collision are inevitable and collision resolution is required.
+    - Collision resolution should solve questions of:
+      - Organizing values in the same bucket
+      - Too many values assigned to same bucket
+      - Search specific target in a bucket
+    - The above questions relate to the capacity of the bucket and the number of keys that might be mapped into the same bucket.
+    - For a given bucket, that holds maximum number of N keys,
+      - if N is constant and small, then a array be used to store keys in the same bucket
+      - if N is variable or large, then a height-balanced binary search tree can be used.
+
+- For a qiven requirement, the hash function is determined, and collision resolution is applied if needed,
+  and basic operations of insertion and search are provided, all other operations are based on these two.
+   

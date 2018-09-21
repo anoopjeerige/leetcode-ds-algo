@@ -1,0 +1,12 @@
+Tree
+----
+- A data structure to simulate hierarchical tree structure
+- Each node of the tree will have a root value and list of references to other child nodes
+- Can be viewed as directed acyclic graph with N nodes and N - 1 edges
+
+Binary Tree
+-----------
+- A tree structure with at most two children
+
+
+

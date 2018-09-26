@@ -1,3 +1,2 @@
 # leetcode-ds-algo
-Data Structures and Algorithms from the Leetcode Explore sections
-And few exercise problems
+Data Structures and Algorithms from the Leetcode Explore sections along with few exercise problems.

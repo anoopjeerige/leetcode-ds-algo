@@ -1,0 +1,52 @@
+Hash Map
+--------
+- One implementation of the map data structure to store key value pairs
+- Uses hash functions to support quick insertions and deletions
+- Python
+  dict is a mapping object that maps hashable values to arbitary objects
+  x = {} or x = {'test':1, 'hello':2}, x = dict(test=1, hello=2)
+  Note - dict py36 onwards maintains insertion order
+  len(x)
+  x[key] - Raises KeyError if key not in map
+  x[key] = value
+  del x[key] - Raises KeyErro if key not in map
+  key in x
+  iter(x) - iterator over keys
+  get(key[,default]) - return value for key if key present else default value
+                       None if no default value
+  items() - view of dict's key, value pairs
+  keys()
+  values()
+
+- Java
+  Map is the object that maps keys to values
+  A map cannot contain duplicate keys, mathematical abstraction of a function
+  Basic operations
+  put, get, remove, containsKey, containsValue, size, isEmpty
+  bulk operations
+  putAll, clear
+  collection views 
+  keySet, entrySet, values
+
+
+Scenarios where to use Hash Map
+-------------------------------
+- Provide more information
+  Case where we need more information rather than only the key
+  Hash map used to build relationship between key and information
+  eg. return indices of two numbers that add up to a specific target
+- Aggregate all the information by the key
+  eg. Return the first non-repeating character in a string
+
+Design Key
+----------
+- Its esssential to choose the right key for the hash table
+- Designing a key is to build a mapping relationship by yourself
+  between the original information and the actual key used by the hash map
+- When designing a key
+  1) All values belong to the same group will be mapped in the same group
+  2) Values which needed to be separated into different groups will not be mapped
+     into the same group  
+  eg. Given a array of strings, group anagrams together
+      here the string 'eat' and 'ate' can be both sorted as 'aet'
+      and used as key

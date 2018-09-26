@@ -1,0 +1,31 @@
+Hash Set
+--------
+- One implementation of the set data structure to store no repeated values
+- Uses hash functions to support quick insertion and deletion
+- Python
+  Set
+  - Unorderd collection of distinct hashable objects (All python's immutable built-in types
+  are hashable, mutable containers like list or dict are not)
+  - Similar to other collections, supports
+    x in set,
+    len(set)
+    for x in set
+  - Being unordered collections, does not record element position or insertion order
+  - As a mutable container, supports
+    add()
+    remove(elem) - raises KeyError if element not in set
+    discard(elem) - remove if present
+
+- Java
+  Set
+  - A collection that cannot contain duplicate elements, mathematical set abstraction
+  - Three general purpose implementations: 
+    - HashSet()
+    - TreeSet() 
+    - LinkedHashSet()
+  - Basic operations
+    isEmpty()
+    add() - boolean return
+    remove() - boolean return
+
+
